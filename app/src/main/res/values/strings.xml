@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Cartão de Crédito</string>
+
+    <string name="card_brand_logo">Logotipo da bandeira do cartão</string>
+    <string name="card_number_placeholder">•••• •••• •••• ••••</string>
+    <string name="card_holder_placeholder">NOME DO TITULAR</string>
+    <string name="card_expiry_placeholder">MM/AA</string>
+    <string name="card_cvv_placeholder">•••</string>
+
+    <string name="hint_card_number">Número do cartão</string>
+    <string name="hint_card_holder">Nome do titular</string>
+    <string name="hint_expiry">Validade (MM/AA)</string>
+    <string name="hint_cvv">CVV</string>
+
+    <string name="btn_confirmar">Confirmar</string>
+</resources>
