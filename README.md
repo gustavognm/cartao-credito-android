@@ -1,25 +1,38 @@
-# Cartão de Crédito (Kotlin)
+# Cartão de Crédito
 
-> 🚧 Projeto em desenvolvimento — este README será atualizado conforme as funcionalidades forem implementadas.
+Aplicativo Android em **Kotlin**, com **ConstraintLayout**, que simula a interface de um cartão de crédito com atualização em tempo real conforme o formulário é preenchido.
 
-Aplicativo Android em **Kotlin**, com **ConstraintLayout**, simulando a interface de um cartão de crédito.
+## Funcionalidades
 
-## Feito até agora
+- `CardView` no topo da tela refletindo em tempo real os dados digitados: número, nome do titular e validade.
+- Máscara automática no número do cartão (espaço a cada 4 dígitos, limite de 16) e na validade (formato `MM/AA`).
+- Validação antes de confirmar: número precisa ter 16 dígitos, nome pelo menos 3 caracteres, validade completa e CVV com 3 dígitos — mensagens de erro específicas para cada caso.
+- Ao focar no campo CVV, o cartão gira (animação de flip) e mostra o verso, com o CVV digitado; ao focar em outro campo, volta para a frente.
+- Identificação dinâmica da bandeira (Visa, Mastercard ou outra) conforme os primeiros dígitos digitados, atualizando o texto da bandeira e a cor do cartão instantaneamente.
 
-- Layout inicial: `CardView` de frente e verso sobrepostas (verso oculto, já preparado para o flip do Desafio 1).
-- Formulário com campos: número do cartão, nome do titular, validade e CVV.
-- Botão Confirmar.
+## Capturas de tela
 
-## Pendente
+| Frente — VISA (início 4111) | Frente — Mastercard (início 5111) | Verso — CVV digitado |
+|---|---|---|
+| ![Frente VISA](screenshots/frente_visa.jpeg) | ![Frente Mastercard](screenshots/frente_mastercard.jpeg) | ![Verso do cartão](screenshots/verso_cvv.jpeg) |
 
-- Máscaras automáticas (espaço a cada 4 dígitos no número, formato MM/AA na validade).
-- Validação (16 dígitos no número, nome com 3+ caracteres).
-- Desafio 1: flip do cartão ao focar no campo CVV.
-- Desafio 2: identificação dinâmica da bandeira (Visa, Mastercard, etc).
+| Validação — sucesso | Validação — erro |
+|---|---|
+| ![Dados válidos](screenshots/validacao_sucesso.jpeg) | ![CVV inválido](screenshots/validacao_erro.jpeg) |
 
-## Captura de tela (estado atual)
+## Tecnologias utilizadas
 
-![Layout inicial](screenshots/layout_inicial.png)
+Kotlin, ConstraintLayout, CardView, `TextWatcher` (máscaras e atualização em tempo real), `ObjectAnimator` (animação do flip do cartão).
+
+## Como compilar e executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/gustavognm/cartao-credito-android.git
+   ```
+2. Abra o projeto no Android Studio (**Open an existing project**).
+3. Aguarde a sincronização do Gradle.
+4. Conecte um dispositivo Android ou inicie um emulador, e clique em **Run ▶**.
 
 ## Autor
 
